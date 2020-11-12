@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/assets/css/burger_style.css" type="text/css" />
+    <title>Eat Da Burger</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <center>
+            <div class="row">
+                <img>
+                <h1>Eat Da Burger!</h1>
+                <p>Add a burger of your choice or if you see a burger you like in the list, devour it!</p>
+            </div>
+        </center>
+    </div>
+
+    {{{ body }}}
+
+    <form action="burger/new" method="POST">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group col-md-6">
+                    <center><label for="burger" class="submitFont">Add a new burger!</label></center>
+                    <textarea class="form-control" type="text" cols="8" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <center>
+                    <button id="submit-button" type="sumbit" class="btn btn-secondary"></button>
+                </center>
+            </div>
+    </form>
+</body>
+
+</html>
