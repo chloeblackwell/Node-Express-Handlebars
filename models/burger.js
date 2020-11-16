@@ -3,28 +3,28 @@ const orm = require("../config/orm");
 
 // Calls the ORM functions using specific input to ORM
 
-var burger =
-{
-
+var burger = {
+    // Select all burger table entries
     selectAll: function (cb) {
-        orm.selectAll(function (res) {
+        orm.selectAll('burgers', function (res) {
             cb(res);
         });
     },
 
-    insertOne: function (burger_name, cb) {
-        orm.insertOne(burger_name, function (res) {
+    // Insert new table entry
+    insertOne: function (cols, vals, cb) {
+        orm.insertOne('burgers', cols, vals, function (res) {
             cb(res);
         });
     },
-
-    updateOne: function (burger_id, cb) {
-        orm.updateOne(burger_id, function (res) {
+    // Update the table entry
+    updateOne: function (objColVals, condition, cb) {
+        orm.updateOne('burgers', objColVals, condition, function (res) {
             cb(res);
         });
     }
+};
 
-}
 // Export file
 
 module.exports = burger;

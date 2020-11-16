@@ -8,29 +8,32 @@ router.get("/", function (req, res) {
 });
 
 // Home page 
-router.get("/home", function (req, res) {
+router.get('/home', function (req, res) {
     burger.selectAll(function (data) {
         var hbsObject = {
             burgers: data
         };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
+        res.render('index', hbsObject);
     });
 });
-
-// New route for new burger
-router.post("/burger/new", function (req, res) {
-    burger.insertOne(req.body.burger_name, function () {
-        // Redirects to home page 
-        res.redirect("/home")
-    })
+// Create new burger 
+router.post('/burger/new', function (req, res) {
+    burger.insertOne([
+        'burger_name'
+    ], [
+        req.body.burger_name
+    ], function (data) {
+        res.redirect('/home');
+    });
 });
+// Moves devoured burgers
+router.post('/burger/devour/:id', function (req, res) {
+    var condition = 'id = ' + req.params.id;
 
-// Route for devoured burgers
-router.post("/burger/devour/:id", function (req, res) {
-    burger.updateOne(req.params.id, function () {
-        // Redirects to home page
-        res.redirect("/home");
+    burger.updateOne({
+        devoured: true
+    }, condition, function (data) {
+        res.redirect('/home');
     });
 });
 

@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/public/assets/css/burger_style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
     <title>Eat Da Burger</title>
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
@@ -13,29 +16,26 @@
     <div class="container">
         <center>
             <div class="row">
-                <img>
-                <h1>Eat Da Burger!</h1>
-                <p>Add a burger of your choice or if you see a burger you like in the list, devour it!</p>
+                <div class="col-md-12">
+                    <img src="/assets/img/burger.png" alt="burger">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Eat Da Burger!</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Add a burger of your choice or if you see a burger you like in the list, devour it!</p>
+                </div>
             </div>
         </center>
     </div>
 
     {{{ body }}}
 
-    <form action="burger/new" method="POST">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group col-md-6">
-                    <center><label for="burger" class="submitFont">Add a new burger!</label></center>
-                    <textarea class="form-control" type="text" cols="8" rows="5"></textarea>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <center>
-                    <button id="submit-button" type="sumbit" class="btn btn-secondary"></button>
-                </center>
-            </div>
-    </form>
+
 </body>
 
 </html>

@@ -1,6 +1,7 @@
-<div class="row">
-    <centre>
+<div class="container">
+    <div class="row">
         <div class="col-md-6">
+            <h4 class="burgers">Burgers Avaliable</h4>
             {{#each burgers}}
             {{#unless devoured}}
             <form action="burger/devour/{{id}}" method="POST">
@@ -15,7 +16,7 @@
             {{/each}}
         </div>
         <div class="col-md-6">
-            <h4 class="sumbitFont">Burgers Devoured</h4>
+            <h4 class="burgers">Burgers Devoured</h4>
             {{#each burgers}}
             {{#if devoured}}
             <div class="input-group">
@@ -24,5 +25,29 @@
             {{/if}}
             {{/each}}
         </div>
-    </centre>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <form action="burger/new" method="POST">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group col-md-12">
+                            <label for="burger" class="submitFont">
+                                <h4>Add a new burger!</h4>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <textarea class="form-control" type="text" cols="10" rows="5" name="burger_name"
+                            id="name"></textarea>
+                    </div>
+                    <div class="col-md-4">
+                        <button id="submit-button" type="submit" class="btn btn-secondary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
