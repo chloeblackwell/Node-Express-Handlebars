@@ -8,9 +8,13 @@ This application consists of 1 main file, server.js. It also has a config folder
 
 ## Usage 
 
-To use this application, git clone this repository. Once you have git cloned, run npm install to install the dependencies for the application. 
+To use this application, git clone this repository. Once you have git cloned, run npm install to install the dependencies for the application which are: 
 
-The application can be envoked with node server.
+- Express
+- Express-handlebars
+- MySQL
+
+The application can be invoked with node server.
 
 ## Screenshots
 
