@@ -22,7 +22,7 @@ router.post('/burger/new', function (req, res) {
         'burger_name'
     ], [
         req.body.burger_name
-    ], function (data) {
+    ], function () {
         res.redirect('/home');
     });
 });
@@ -32,7 +32,7 @@ router.post('/burger/devour/:id', function (req, res) {
 
     burger.updateOne({
         devoured: true
-    }, condition, function (data) {
+    }, condition, function () {
         res.redirect('/home');
     });
 });
