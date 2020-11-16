@@ -2,8 +2,11 @@ body {
   background-color: teal;
   color: white;
 }
-/* 
-#formCentre {
-  margin: 0 auto;
-  width: 80%;
-} */
+
+.submitFont {
+  margin-left: 350px;
+}
+
+.userInput {
+  margin-left: 150px;
+}

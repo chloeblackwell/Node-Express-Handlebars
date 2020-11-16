@@ -8,7 +8,7 @@
                 <div class="input-group">
                     <li class="form-control">{{id}}. {{burger_name}}</li>
                     <span class="input-group-btn">
-                        <button class="btn btn-success devour-button" type="submit">Devour it!</button>
+                        <button class="btn btn-secondary devour-button" type="submit">Devour it!</button>
                     </span>
                 </div>
             </form>
@@ -25,11 +25,11 @@
             {{/if}}
             {{/each}}
         </div>
-    </div>
-    <div class="row justify-content-center">
+    </div><br>
+    <div class="row">
         <div class="col-md-12">
             <form action="burger/new" method="POST">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-md-12">
                         <div class="form-group col-md-12">
                             <label for="burger" class="submitFont">
@@ -38,13 +38,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-md-4">
-                        <textarea class="form-control" type="text" cols="10" rows="5" name="burger_name"
+                        <textarea class="form-control userInput" type="text" cols="10" rows="5" name="burger_name"
                             id="name"></textarea>
                     </div>
                     <div class="col-md-4">
-                        <button id="submit-button" type="submit" class="btn btn-secondary">Submit</button>
+                        <button id="submit-button" type="submit" class="btn btn-secondary userInput">Submit</button>
                     </div>
                 </div>
             </form>
