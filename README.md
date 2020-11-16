@@ -22,7 +22,7 @@ The application can be invoked with node server.
 
 ## Link to the application
 
-<a href="">Link to the application</a>
+<a href="https://ancient-ridge-24709.herokuapp.com/">Link to the application</a>
 
 ## Built With
 
